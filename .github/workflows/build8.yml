@@ -1,6 +1,8 @@
 name: Build .NET 8 Blazor App
 
 on:
+  pull_request:
+    branches: [ "main" ]
   workflow_dispatch:    
 
 jobs:
