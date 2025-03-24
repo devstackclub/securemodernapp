@@ -30,3 +30,8 @@ jobs:
           app-name: ${{ env.AZURE_WEBAPP_NAME}}
           publish-profile: ${{ secrets.PUBLISH_SECRET }}
           package: ./publish
+
+      - name: ZAP Scan
+        uses: zaproxy/action-baseline@v0.14.0
+        with:
+          target: 'https://romaanwebappone.azurewebsites.net/'
